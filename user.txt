@@ -1,1 +1,2 @@
-vitaly.povstenko@gmail.com: qwerty: qwerty
+vitaly.povstenko@gmail.com: qwerty: qwertytester@tester: tester: tester
+admin@admin: admin: admin

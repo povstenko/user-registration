@@ -1,4 +1,6 @@
-<?php 
+<?php
+	$message = '';
+
 	if (!empty($_POST)) {
 		if (isset($_POST["email"]) && isset($_POST["username"]) && isset($_POST["password"])) 
 		{
@@ -9,10 +11,10 @@
 				$file=fopen("user.txt", "a");
 				fwrite($file, $userdata);
 				fclose($file);
-				header("Location: /index.php");
+				header("Location: index.php");
 			}
 			else {
-				$message = 'User with that usernmae is...';
+				$message = 'User with that username already exists';
 			}
 		}
 		else {
@@ -24,13 +26,13 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Add user</title>
+	<title>Add User</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
 	<div class="container">
+	<?= $message ?>
 		<div class="row">
-			<?= $message ?>
 			<form action="AddUser.php" method="post">
 			  <div class="form-group">
 			    <label for="InputEmail">Email address</label>

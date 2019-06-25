@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Show Users</title>
 </head>
 <body>
 	<?php 
-		$fileString=file_get_contents("user.txt");
+		$fileString = file_get_contents("user.txt");
 		echo $fileString;
 	?>
 </body>
